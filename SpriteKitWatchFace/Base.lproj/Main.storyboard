@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpriteKitWatchFace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deA-0y-GlQ">
+                                <rect key="frame" x="67.666666666666686" y="266" width="240" height="280"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9V-jd-mpn">
+                                        <rect key="frame" x="28" y="28" width="184" height="224"/>
+                                        <subviews>
+                                            <skView contentMode="scaleToFill" preferredFramesPerSecond="60" translatesAutoresizingMaskIntoConstraints="NO" id="T4E-yL-zqe">
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="224"/>
+                                            </skView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="224" id="F5a-DV-xab"/>
+                                            <constraint firstAttribute="width" constant="184" id="Vr2-r5-zdQ"/>
+                                            <constraint firstItem="T4E-yL-zqe" firstAttribute="leading" secondItem="T9V-jd-mpn" secondAttribute="leading" id="iJg-Ww-R1F"/>
+                                            <constraint firstItem="T4E-yL-zqe" firstAttribute="top" secondItem="T9V-jd-mpn" secondAttribute="top" id="kve-qZ-k0C"/>
+                                            <constraint firstAttribute="trailing" secondItem="T4E-yL-zqe" secondAttribute="trailing" id="wLs-fp-iFt"/>
+                                            <constraint firstAttribute="bottom" secondItem="T4E-yL-zqe" secondAttribute="bottom" id="xjy-OC-mLG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="T9V-jd-mpn" firstAttribute="centerX" secondItem="deA-0y-GlQ" secondAttribute="centerX" id="K5I-uw-nNl"/>
+                                    <constraint firstAttribute="height" constant="280" id="aGe-eJ-5Oo"/>
+                                    <constraint firstItem="T9V-jd-mpn" firstAttribute="centerY" secondItem="deA-0y-GlQ" secondAttribute="centerY" id="dOS-Qe-QO1"/>
+                                    <constraint firstAttribute="width" constant="240" id="zcG-Ff-0eB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a47-zQ-G24">
+                                <rect key="frame" x="137" y="716" width="101" height="30"/>
+                                <state key="normal" title="Change theme"/>
+                                <connections>
+                                    <action selector="changeThemeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6gR-cT-uec"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="deA-0y-GlQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GGp-Z9-7fS"/>
+                            <constraint firstItem="deA-0y-GlQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b0y-Kh-2Lo"/>
+                            <constraint firstItem="a47-zQ-G24" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dBv-d4-swt"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="bottom" secondItem="a47-zQ-G24" secondAttribute="bottom" constant="32" id="kLm-gz-PpX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="T9V-jd-mpn" id="ple-Zb-hiK"/>
+                        <outlet property="skView" destination="T4E-yL-zqe" id="506-sb-gbI"/>
+                        <outlet property="watchView" destination="deA-0y-GlQ" id="aSd-Nn-0zX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
